@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color:red;"><strong>Error: </strong>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+</body>
+</html>
